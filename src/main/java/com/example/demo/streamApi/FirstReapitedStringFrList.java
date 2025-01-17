@@ -16,8 +16,9 @@ public class FirstReapitedStringFrList {
 		list.add("Akash");
 		list.add("Sagar");
 		
-		Map<String,Long> collect = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream().filter(e -> e.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-		System.out.println(collect);
+		//Map<String,Long> collect = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream().filter(e -> e.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+		Map<String,Long> collect = list.stream().collect(Collectors.groupingBy( r -> r, Collectors.counting())).entrySet().stream().filter(e -> e.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+		System.out.println("===== "+collect);
 		
 		Optional<Entry<String,Long>> collect2 = list.stream().collect(Collectors
 				.groupingBy(Function.identity(), Collectors.counting())).entrySet()

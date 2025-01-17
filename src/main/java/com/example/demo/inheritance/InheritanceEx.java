@@ -16,7 +16,7 @@ package com.example.demo.inheritance;
 	}
 	
 	public void show() {
-		System.out.println("SHow in A");
+		System.out.println("show in A");
 	}
 }
   
@@ -24,12 +24,12 @@ package com.example.demo.inheritance;
 	  int a=40;
 	  @Override
 	  public void runn() {
-		  System.out.println("In B Class method run");
+		  System.out.println("In B Class run method");
 		  //super.runn();
 	  }
 	  
 	  public void shows() {
-			System.out.println("SHow in B");
+			System.out.println("shows in B");
 		}
   }
 
@@ -40,13 +40,14 @@ public class InheritanceEx {
 		a2.runn();
 		a2.show();
 		
-		
+		System.out.println("**** A a= new B(); ****");
 		A a= new B();
 		System.out.println(a.a);
 		a.runn();
 		a.show();
 		
 		
+		System.out.println("B b= new B()");
 		B b= new B();
 		b.runn();
 		b.show();
